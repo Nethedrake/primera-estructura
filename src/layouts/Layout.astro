@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 interface Props {
 	title: string;
 }
@@ -31,9 +32,25 @@ name: "producto 3",
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="header">
-		<div class="container header_info">
-			Contenido de la cabecera
+		<div class="bg-zinc-800">
+		<div class="container flex items-center">
+			<img src="/public/AliExpress_Logo.webp" class="h-[61px]">
+			<div class="bg-zinc-800 relative">
+				<input  placeholder="buscar..." class="h-9 rounded-full pl-5 pr-14 outline-none w-96 ">
+				<div class="bg-zinc-800 right-2 top-[2px] absolute inline-block text-white rounded-2xl py-1 px-1">
+					<Icon name="mdi:search" class="size-6" />
+					
+				</div>
+				
+				
+			</div>
+			<div class="text-white flex ml-3">
+				<Icon name="mdi:qrcode" class="h-8 w-8"/>
+				<p class="text-white text-xs">Descarga la app <br> AliExpress</p>
+			</div>
+			<div class="flex ">
+				<Icon name="emojione-v1:flag-for-colombia" />
+			</div>
 		</div>
 	</div>
 	<div class="container banner">
@@ -71,12 +88,7 @@ name: "producto 3",
 		background-color: #FF5522;
 		height: 40px;
 	}
-	.header{
-		background-color: orange;
-	}
-	.header_info{
-		height: 120px;
-	}
+	
 	.main_menu a{
 		transition: background 300ms ease-in-out;
 		padding: 0 12px;
@@ -122,11 +134,7 @@ name: "producto 3",
 		height: 80px;
 	}
 
-	.container{
-		max-width: 1280px;
-		/*background-color: blue;*/
-		margin: 0 auto;
-	}
+	
 	html,  .body {
 		font-family: system-ui, sans-serif;
 		margin: 0;
